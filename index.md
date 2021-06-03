@@ -31,6 +31,13 @@ style: |
 
 </div>
 
+## Немного о Promise
+
+{:.next#question style="float:left;"}
+- ...Соответсвует одной асинхронной операции
+- ...Позволяет обработать результат асинхронной операции
+{:.image-right style="margin-top: -30px"}
+
 ## Контакты 
 {:.contacts}
 
@@ -59,13 +66,6 @@ style: |
 {% endif %}
 
 </figure>
-
-## Немного о Promise
-
-{:.next#question style="float:left;"}
-- ...Соответсвует одной асинхронной операции
-- ...Позволяет обработать результат асинхронной операции
-{:.image-right style="margin-top: -30px"}
 
 {% endif %}
 
