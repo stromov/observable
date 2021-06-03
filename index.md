@@ -71,8 +71,8 @@ style: |
 <!-- - {:.github}author -->
 
 <!-- right -->
-- {:.twitter}@author
-- {:.facebook}author
+<!-- - {:.twitter}@author -->
+<!-- - {:.facebook}author -->
 - {:.telegram}@stromov
 
 <!-- 
