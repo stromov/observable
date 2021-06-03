@@ -33,7 +33,7 @@ style: |
 
 ## Немного о Promise
 
-{:.next#question style="float:left;"}
+{:.next#question style="float:right;"}
 - ...Соответсвует одной асинхронной операции
 - ...Позволяет обработать результат асинхронной операции
 {:.image-right style="margin-top: -30px"}
