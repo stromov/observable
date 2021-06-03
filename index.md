@@ -314,13 +314,14 @@ for (var i = 0; i < x; i++) {
 -------
 
 <!-- left -->
-- {:.skype}author
-- {:.mail}author@yandex-team.ru
-- {:.github}author
+<!-- - {:.skype}author -->
+<!-- - {:.mail}author@yandex-team.ru -->
+<!-- - {:.github}author -->
 
 <!-- right -->
 - {:.twitter}@author
 - {:.facebook}author
+- {:.telegram}@stromov
 
 <!-- 
 
