@@ -174,7 +174,7 @@ interval(1000).subscribe(console.log)
 
 ## fromEvent
 
-``js
+```js
 const clicks = fromEvent(document, 'click');
 clicks.subscribe(x => console.log(x));
 
