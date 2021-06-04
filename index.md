@@ -64,6 +64,63 @@ const observable = new Observable(({next, complete, error}) => {/* some code */}
 |  Сигнализирует о завершении                |  resolve   |  complete   |
 
 
+## Пример Observable
+
+```js
+const observable = new Observable(subscriber => {
+  subscriber.next(1);
+  subscriber.next(2);
+  subscriber.next(3);
+  setTimeout(() => {
+    subscriber.next(4);
+    subscriber.complete();
+  }, 1000);
+});
+```
+
+## Subscribe
+
+```js
+const observable = new Observable(subscriber => {
+  subscriber.next(1);
+  subscriber.next(2);
+  subscriber.next(3);
+  setTimeout(() => {
+    subscriber.next(4);
+    subscriber.complete();
+  }, 1000);
+});
+
+console.log('just before subscribe');
+observable.subscribe({
+  next(x) { console.log('got value ' + x); },
+  error(err) { console.error('something wrong occurred: ' + err); },
+  complete() { console.log('done'); }
+});
+console.log('just after subscribe');
+```
+
+```
+just before subscribe
+got value 1
+got value 2
+got value 3
+just after subscribe
+got value 4
+done
+```
+
+## Unsubscribe
+
+Не забываем отписываться от <b>бесконечных</b> потоков!
+
+```js
+const observable = interval(1000);
+const subscription = observable.subscribe(x => console.log(x));
+
+subscription.unsubscribe();
+```
+
 ## Контакты 
 {:.contacts}
 
