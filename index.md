@@ -186,7 +186,7 @@ clicks.subscribe(x => console.log(x));
 
 ### merge, concat
 
-### merge
+## merge
 
 ```js
 const clicks = fromEvent(document, 'click');
