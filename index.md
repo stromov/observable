@@ -189,11 +189,7 @@ clicks.subscribe(console.log);
 ## merge
 
 ```js
-const clicks = fromEvent(document, 'click');
-const timer = interval(1000);
-const clicksOrTimer = merge(clicks, timer);
-
-clicksOrTimer.subscribe(console.log);
+merge(observable, anotherObservable);
 ```
 
 {:.images}
@@ -201,11 +197,7 @@ clicksOrTimer.subscribe(console.log);
 
 ## concat
 ```js
-const firstObservable = form([1,2,3]);
-const secondObservable = from([3,4,5]);
-const result = concat(firstObservable, secondObservable);
-
-result.subscribe(console.log)
+concat(observable, anotherObservable)
 ``` 
 
 {:.images}
