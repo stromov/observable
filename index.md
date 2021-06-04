@@ -5,6 +5,11 @@ layout: yandex2
 style: |
     /* собственные стили можно писать здесь!! */
 
+    #observer-iterator img {
+        width: 100%;
+        margin-top: 50px;
+    }
+
 
 ---
 
@@ -39,7 +44,7 @@ style: |
 
 ## Observer + Iterator = Observable
 
-{:.images}
+{:.images #observer-iterator}
 ![](pictures/IteratorAndObserver.png)
 
 ## Контакты 
