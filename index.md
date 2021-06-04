@@ -101,6 +101,7 @@ console.log('just after subscribe');
     4
     done
 ```
+{:.image-right}
 ## Unsubscribe
 
 Не забываем отписываться от потоков, особенно от <b>бесконечных</b>!
