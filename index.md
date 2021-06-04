@@ -84,11 +84,12 @@ const observable = new Observable(subscriber => {
 console.log('just before subscribe');
 observable.subscribe({
   next(x) { console.log('got value ' + x); },
-  error(err) { console.error('something wrong occurred: ' + err); },
+  error(err) { console.error('got error: ' + err); },
   complete() { console.log('done'); }
 });
 console.log('just after subscribe');
 ```
+{:.next style="float:left;"}
 ```
     just before subscribe
     got value 1
@@ -98,7 +99,7 @@ console.log('just after subscribe');
     got value 4
     done
 ```
-{:style="float: left"}
+{:.next.image-right}
 
 ## Unsubscribe
 
