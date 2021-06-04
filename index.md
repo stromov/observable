@@ -39,10 +39,8 @@ style: |
 
 ## Observer + Iterator = Observable
 
-{:.images .two}
-![](pictures/Observer.png)
-
-![](pictures/Iterator.png)
+{:.images}
+![](pictures/IteratorAndObserver.png)
 
 ## Контакты 
 {:.contacts}
