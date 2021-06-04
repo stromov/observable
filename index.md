@@ -113,6 +113,29 @@ const subscription = observable.subscribe(x => console.log(x));
 subscription.unsubscribe();
 ```
 
+## Хелперы для создания Observable
+{:.section}
+
+### from
+
+## from
+
+```js
+const observableFromPromise = from(somePromise);
+observableFromPromise.subscribe(x => console.log(x));
+
+// *somePromise result*
+```
+
+```js
+const observableFromArray = from([1,2,3]);
+observableFromArray.subscribe(x => console.log(x));
+
+// 1
+// 2
+// 3
+```
+
 ## Контакты 
 {:.contacts}
 
