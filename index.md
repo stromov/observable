@@ -36,7 +36,7 @@ style: |
 
 </div>
 
-## Немного о Promise
+## Вспомним о Promise
 
 {:.next#question}
 - ...Соответсвует одной асинхронной операции
@@ -46,6 +46,23 @@ style: |
 
 {:.images #observer-iterator}
 ![](pictures/IteratorAndObserver.png)
+
+## Promise и Observable
+
+```js
+const promise = new Promise((resolve, reject) => {/* some code */})
+```
+
+```js
+const observable = new Observable(({next, complete, error}) => {/* some code */})
+```
+
+|                                            |  Promise   |  Observable |
++--------------------------------------------|------------|-------------+
+|  Обрабатывает значение в случае успеха     |  resolve   |  next       |
+|  Обрабатывает значение в случае ошибки     |  reject    |  error      |
+|  Сигнализирует о завершении                |  resolve   |  complete   |
+
 
 ## Контакты 
 {:.contacts}
