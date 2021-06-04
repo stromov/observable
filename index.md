@@ -41,7 +41,7 @@ style: |
 
 Observer + Iterator = Observable
 
-{:.images}
+{:.images .two}
 ![](pictures/Observer.png)
 
 ![](pictures/Iterator.png)
