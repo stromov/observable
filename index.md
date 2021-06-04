@@ -116,15 +116,15 @@ subscription.unsubscribe();
 ## Хелперы для создания Observable
 {:.section}
 
-### from
+### from, of, timer, interval, fromEvent
 
 ## from
 
 ```js
-const observableFromPromise = from(somePromise);
+const observableFromPromise = from(new Promise(resolve => resolve('result')));
 observableFromPromise.subscribe(x => console.log(x));
 
-// *somePromise result*
+// result
 ```
 
 ```js
@@ -134,6 +134,51 @@ observableFromArray.subscribe(x => console.log(x));
 // 1
 // 2
 // 3
+```
+
+## of
+
+```js
+of(10, 20, 30)
+.subscribe(
+  next => console.log('next:', next),
+  err => console.log('error:', err),
+  () => console.log('the end'),
+);
+
+// next: 10
+// next: 20
+// next: 30
+// the end
+```
+
+## timer и interval
+
+```js
+timer(500, 1000).subscribe(console.log)
+
+// 0
+// 1
+// 2
+// ...
+```
+
+```js
+interval(1000).subscribe(console.log)
+
+// 0
+// 1
+// 2
+// ...
+```
+
+## fromEvent
+
+``js
+const clicks = fromEvent(document, 'click');
+clicks.subscribe(x => console.log(x));
+
+// При клике на document выведется объект MouseEvent
 ```
 
 ## Контакты 
