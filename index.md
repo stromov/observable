@@ -108,7 +108,7 @@ console.log('just after subscribe');
 
 ```js
 const observable = interval(1000);
-const subscription = observable.subscribe(x => console.log(x));
+const subscription = observable.subscribe(console.log);
 
 subscription.unsubscribe();
 ```
@@ -122,14 +122,14 @@ subscription.unsubscribe();
 
 ```js
 const observableFromPromise = from(new Promise(resolve => resolve('result')));
-observableFromPromise.subscribe(x => console.log(x));
+observableFromPromise.subscribe(console.log);
 
 // result
 ```
 
 ```js
 const observableFromArray = from([1,2,3]);
-observableFromArray.subscribe(x => console.log(x));
+observableFromArray.subscribe(console.log);
 
 // 1
 // 2
@@ -176,7 +176,7 @@ interval(1000).subscribe(console.log)
 
 ```js
 const clicks = fromEvent(document, 'click');
-clicks.subscribe(x => console.log(x));
+clicks.subscribe(console.log);
 
 // При клике на document выведется объект MouseEvent
 ```
@@ -192,11 +192,24 @@ clicks.subscribe(x => console.log(x));
 const clicks = fromEvent(document, 'click');
 const timer = interval(1000);
 const clicksOrTimer = merge(clicks, timer);
-clicksOrTimer.subscribe(x => console.log(x));
+
+clicksOrTimer.subscribe(console.log);
 ```
 
-{:.images #observer-iterator}
+{:.images}
 ![](pictures/merge.png)
+
+## concat
+```js
+const firstObservable = form([1,2,3]);
+const secondObservable = from([3,4,5]);
+const result = concat(firstObservable, secondObservable);
+
+result.subscribe(console.log)
+``` 
+
+{:.images}
+![](pictures/concat.png)
 
 ## Контакты 
 {:.contacts}
