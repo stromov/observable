@@ -88,8 +88,8 @@ observable.subscribe({
   complete() { console.log('done'); }
 });
 console.log('just after subscribe');
-
-/*
+```
+```
     just before subscribe
     got value 1
     got value 2
@@ -97,12 +97,12 @@ console.log('just after subscribe');
     just after subscribe
     got value 4
     done
-*/
 ```
+{:style="float: left"}
 
 ## Unsubscribe
 
-Не забываем отписываться от <b>бесконечных</b> потоков!
+Не забываем отписываться от потоков, особенно от <b>бесконечных</b>!
 
 ```js
 const observable = interval(1000);
