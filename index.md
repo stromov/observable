@@ -83,8 +83,8 @@ const observable = new Observable(subscriber => {
 ```js
 console.log('just before subscribe');
 observable.subscribe({
-  next(x) { console.log('got value ' + x); },
-  error(err) { console.error('got error: ' + err); },
+  next(x) { console.log(x); },
+  error(err) { console.error(err); },
   complete() { console.log('done'); }
 });
 console.log('just after subscribe');
@@ -92,11 +92,11 @@ console.log('just after subscribe');
 {:.next style="float:left;"}
 ```
     just before subscribe
-    got value 1
-    got value 2
-    got value 3
+    1
+    2
+    3
     just after subscribe
-    got value 4
+    4
     done
 ```
 {:.next.image-right}
