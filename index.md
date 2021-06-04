@@ -41,6 +41,10 @@ style: |
 
 Observer + Iterator = Observable
 
+{:.images}
+![](pictures/Observer.png)
+
+![](pictures/Iterator/images-two.svg)
 
 ## Контакты 
 {:.contacts}
