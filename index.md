@@ -37,9 +37,7 @@ style: |
 - ...Соответсвует одной асинхронной операции
 - ...Позволяет обработать результат асинхронной операции
 
-## Observable как паттерн
-
-Observer + Iterator = Observable
+## Observer + Iterator = Observable
 
 {:.images .two}
 ![](pictures/Observer.png)
