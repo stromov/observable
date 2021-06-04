@@ -181,6 +181,23 @@ clicks.subscribe(x => console.log(x));
 // При клике на document выведется объект MouseEvent
 ```
 
+## Методы комбинирования потоков
+{:.section}
+
+### merge, concat
+
+### merge
+
+```js
+const clicks = fromEvent(document, 'click');
+const timer = interval(1000);
+const clicksOrTimer = merge(clicks, timer);
+clicksOrTimer.subscribe(x => console.log(x));
+```
+
+{:.images #observer-iterator}
+![](pictures/merge.png)
+
 ## Контакты 
 {:.contacts}
 
