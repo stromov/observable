@@ -81,6 +81,7 @@ const observable = new Observable(subscriber => {
 ## Subscribe
 
 ```js
+// code
 console.log('just before subscribe');
 observable.subscribe({
   next(x) { console.log(x); },
@@ -89,8 +90,9 @@ observable.subscribe({
 });
 console.log('just after subscribe');
 ```
-{:.next style="float:left;"}
-```
+{:style="float:left;"}
+```js
+    // console
     just before subscribe
     1
     2
@@ -99,8 +101,6 @@ console.log('just after subscribe');
     4
     done
 ```
-{:.next.image-right}
-
 ## Unsubscribe
 
 Не забываем отписываться от потоков, особенно от <b>бесконечных</b>!
