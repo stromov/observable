@@ -38,7 +38,6 @@ style: |
 
 ## Вспомним о Promise
 
-{:.next#question}
 - ...Соответсвует одной асинхронной операции
 - ...Позволяет обработать результат асинхронной операции
 
@@ -67,7 +66,7 @@ const observable = new Observable(({next, complete, error}) => {/* some code */}
 ## Пример Observable
 
 ```js
-const observable = new Observable(subscriber => {
+const observable$ = new Observable(subscriber => {
   subscriber.next(1);
   subscriber.next(2);
   subscriber.next(3);
@@ -82,7 +81,7 @@ const observable = new Observable(subscriber => {
 
 ```js
 console.log('just before subscribe');
-observable.subscribe({
+observable$.subscribe({
   next(x) { console.log(x); },
   error(err) { console.error(err); },
   complete() { console.log('done'); }
@@ -106,8 +105,8 @@ console.log('just after subscribe');
 Не забываем отписываться от потоков, особенно от <b>бесконечных</b>!
 
 ```js
-const observable = interval(1000);
-const subscription = observable.subscribe(console.log);
+const observable$ = interval(1000);
+const subscription = observable$.subscribe(console.log);
 
 subscription.unsubscribe();
 ```
@@ -120,15 +119,15 @@ subscription.unsubscribe();
 ## from
 
 ```js
-const observableFromPromise = from(new Promise(resolve => resolve('result')));
-observableFromPromise.subscribe(console.log);
+const observableFromPromise$ = from(new Promise(resolve => resolve('result')));
+observableFromPromise$.subscribe(console.log);
 
 // result
 ```
 
 ```js
-const observableFromArray = from([1,2,3]);
-observableFromArray.subscribe(console.log);
+const observableFromArray$ = from([1,2,3]);
+observableFromArray$.subscribe(console.log);
 
 // 1
 // 2
@@ -174,8 +173,8 @@ interval(1000).subscribe(console.log)
 ## fromEvent
 
 ```js
-const clicks = fromEvent(document, 'click');
-clicks.subscribe(console.log);
+const clicks$ = fromEvent(document, 'click');
+clicks$.subscribe(console.log);
 
 // При клике на document выведется объект MouseEvent
 ```
@@ -188,7 +187,7 @@ clicks.subscribe(console.log);
 ## merge
 
 ```js
-merge(observable, anotherObservable);
+merge(...observables$);
 ```
 
 {:.images}
@@ -196,7 +195,7 @@ merge(observable, anotherObservable);
 
 ## concat
 ```js
-concat(observable, anotherObservable)
+concat(...observables$)
 ``` 
 
 {:.images}
@@ -212,16 +211,16 @@ concat(observable, anotherObservable)
 Метод pipe есть у каждого потока. Он принимает в качестве аргументов операторы для обработки потока.
 
 ```js
-observable.pipe(...someOperators);
+observable$.pipe(...someOperators);
 ```
 
 ## map
 
 ```js
-const observable = from([1,2,3]);
-const result = observable.pipe(map(value => value * 10));
+const observable$ = from([1,2,3]);
+const result$ = observable.pipe(map(value => value * 10));
 
-result.subscribe(console.log);
+result$.subscribe(console.log);
 
 // 10
 // 20
@@ -231,10 +230,10 @@ result.subscribe(console.log);
 ## mapTo
 
 ```js
-const observable = from([1,2,3]);
-const result = observable.pipe(mapTo(42));
+const observable$ = from([1,2,3]);
+const result$ = observable$.pipe(mapTo(42));
 
-result.subscribe(console.log);
+result$.subscribe(console.log);
 
 // 42
 // 42
@@ -244,10 +243,10 @@ result.subscribe(console.log);
 ## filter
 
 ```js
-const observable = from([1,2,3]);
-const result = observable.pipe(filter(value => value % 2));
+const observable$ = from([1,2,3]);
+const result$ = observable$.pipe(filter(value => value % 2));
 
-result.subscribe(console.log);
+result$.subscribe(console.log);
 
 // 1
 // 3
@@ -256,10 +255,10 @@ result.subscribe(console.log);
 ## take
 
 ```js
-const myInterval = interval(1000);
-const result = myInterval.pipe(take(3));
+const myInterval$ = interval(1000);
+const result$ = myInterval$.pipe(take(3));
 
-result.subscribe(console.log);
+result$.subscribe(console.log);
 
 // 0
 // 1
@@ -269,10 +268,10 @@ result.subscribe(console.log);
 ## reduce
 
 ```js
-const observable = from([1,2,3]);
-const result = observable.pipe(reduce((acc, value) => acc + value, 0));
+const observable$ = from([1,2,3]);
+const result$ = observable$.pipe(reduce((acc, value) => acc + value, 0));
 
-result.subscribe(console.log);
+result$.subscribe(console.log);
 
 // 6
 ```
@@ -280,14 +279,14 @@ result.subscribe(console.log);
 ## Операторы можно объединять
 
 ```js
-const observable = from([1,2,3]);
-const result = observable.pipe(
+const observable$ = from([1,2,3]);
+const result$ = observable$.pipe(
         map(value => value * 10),
         filter(value => value % 20),
         reduce((acc, value) => acc + value, 0)
     );
 
-result.subscribe(console.log);
+result$.subscribe(console.log);
 
 // 40
 ```
@@ -295,10 +294,10 @@ result.subscribe(console.log);
 ## distinctUntilChanged
 
 ```js
-const observable = from([1,2,2,3,3,3]);
-const result = observable.pipe(distinctUntilChanged());
+const observable$ = from([1,2,2,3,3,3]);
+const result$ = observable$.pipe(distinctUntilChanged());
 
-result.subscribe(console.log);
+result$.subscribe(console.log);
 
 // 1
 // 2
@@ -308,10 +307,10 @@ result.subscribe(console.log);
 ## tap
 
 ```js
-const observable = from([1,2,3]);
-const result = observable.pipe(tap(someSideEffectFunction));
+const observable$ = from([1,2,3]);
+const result$ = observable$.pipe(tap(someSideEffectFunction));
 
-result.subscribe(console.log);
+result$.subscribe(console.log);
  
 // 1
 // 2
@@ -326,13 +325,13 @@ result.subscribe(console.log);
 ## mergeMap
 
 ```js
-const letterObservable = of('a', 'b');
-const result = letterObservable.pipe(
+const letterObservable$ = of('a', 'b');
+const result$ = letterObservable$.pipe(
   mergeMap(letter => 
     interval(1000).pipe(take(2), map(i => `${letter} ${i}`))),
 );
 
-result.subscribe(console.log);
+result$.subscribe(console.log);
 
 // a 0
 // b 0
@@ -347,9 +346,9 @@ result.subscribe(console.log);
 ## switchMap
 
 ```js
-const outerInterval = 
+const outerInterval$ = 
     interval(1500).pipe(take(2));
-const result = outerInterval.pipe(
+const result$ = outerInterval$.pipe(
   switchMap(letter =>
     interval(1000).pipe(
       take(3),
@@ -385,8 +384,8 @@ const result = outerInterval.pipe(
 ## catchError
 
 ```js
-const observable = of(1, 2, 3);
-const result = observable.pipe(
+const observable$ = of(1, 2, 3);
+const result$ = observable$.pipe(
   map(n => {
     if (n === 3) {
       throw new Error();
@@ -396,7 +395,7 @@ const result = observable.pipe(
   catchError(() => of(30, 40))
 );
 
-result.subscribe(console.log);
+result$.subscribe(console.log);
 ```
 {:style="float:left;"}
 ```js
@@ -455,6 +454,16 @@ merge(async$, asap$, queue$, animationFrame$).subscribe(console.log);
 // animationFrameScheduler
 // asyncScheduler
 ```
+
+## Рекомендации
+
+- ...Прочитайте [документацию] (https://rxjs.dev/)
+- ...Поиграйтесь в "песочнице" с примерами
+- ...Попробуйте придумать свои примеры
+- ...[Видео] (https://youtu.be/AslncyG8whg) об очень распространённом способе использования RxJS с Redux
+
+## Спасибо за внимание!
+{:.section}
 
 ## Контакты 
 {:.contacts}
