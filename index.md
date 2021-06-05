@@ -206,7 +206,7 @@ concat(observable, anotherObservable)
 ## Обработка потока
 {:.section}
 
-### pipe, map, mapTo, filter, reduce
+### pipe, map, mapTo, filter, reduce, tap
 
 ## pipe
 
@@ -278,6 +278,32 @@ const result = observable.pipe(
 result.subscribe(console.log);
 
 // 40
+```
+
+## distinctUntilChanged
+
+```js
+const observable = from([1,2,2,3,3,3]);
+const result = observable.pipe(distinctUntilChanged());
+
+result.subscribe(console.log);
+
+// 1
+// 2
+// 3
+```
+
+## tap
+
+```js
+const observable = from([1,2,3]);
+const result = observable.pipe(x => someSideEffectFunction(x));
+
+result.subscribe(console.log);
+ 
+// 1
+// 2
+// 3
 ```
 
 ## Контакты 
