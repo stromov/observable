@@ -49,11 +49,11 @@ style: |
 ## Promise и Observable
 
 ```js
-const promise = new Promise((resolve, reject) => {/* some code */})
+const promise = new Promise((resolve, reject) => {/* some code */});
 ```
 
 ```js
-const observable$ = new Observable(({next, complete, error}) => {/* some code */})
+const observable$ = new Observable(({next, complete, error}) => {/* some code */});
 ```
 
 |                                            |  Promise   |  Observable |
@@ -81,11 +81,11 @@ const observable$ = new Observable(subscriber => {
 
 ```js
 console.log('just before subscribe');
-observable$.subscribe({
+observable$.subscribe(
   next(x) { console.log(x); },
   error(err) { console.error(err); },
   complete() { console.log('done'); }
-});
+);
 console.log('just after subscribe');
 ```
 {:style="float:left;"}
@@ -126,7 +126,7 @@ observableFromPromise$.subscribe(console.log);
 ```
 
 ```js
-const observableFromArray$ = from([1,2,3]);
+const observableFromArray$ = from([1, 2, 3]);
 observableFromArray$.subscribe(console.log);
 
 // 1
@@ -216,8 +216,8 @@ observable$.pipe(...someOperators);
 ## map
 
 ```js
-const observable$ = from([1,2,3]);
-const result$ = observable.pipe(map(value => value * 10));
+const observable$ = from([1, 2, 3]);
+const result$ = observable$.pipe(map(value => value * 10));
 
 result$.subscribe(console.log);
 
@@ -229,7 +229,7 @@ result$.subscribe(console.log);
 ## mapTo
 
 ```js
-const observable$ = from([1,2,3]);
+const observable$ = from([1, 2, 3]);
 const result$ = observable$.pipe(mapTo(42));
 
 result$.subscribe(console.log);
@@ -242,7 +242,7 @@ result$.subscribe(console.log);
 ## filter
 
 ```js
-const observable$ = from([1,2,3]);
+const observable$ = from([1, 2, 3]);
 const result$ = observable$.pipe(filter(value => value % 2));
 
 result$.subscribe(console.log);
@@ -267,7 +267,7 @@ result$.subscribe(console.log);
 ## reduce
 
 ```js
-const observable$ = from([1,2,3]);
+const observable$ = from([1, 2, 3]);
 const result$ = observable$.pipe(reduce((acc, value) => acc + value, 0));
 
 result$.subscribe(console.log);
@@ -278,7 +278,7 @@ result$.subscribe(console.log);
 ## Операторы можно объединять
 
 ```js
-const observable$ = from([1,2,3]);
+const observable$ = from([1, 2, 3]);
 const result$ = observable$.pipe(
         map(value => value * 10),
         filter(value => value % 20),
@@ -293,7 +293,7 @@ result$.subscribe(console.log);
 ## distinctUntilChanged
 
 ```js
-const observable$ = from([1,2,2,3,3,3]);
+const observable$ = from([1, 2, 2, 3, 3, 3]);
 const result$ = observable$.pipe(distinctUntilChanged());
 
 result$.subscribe(console.log);
@@ -306,7 +306,7 @@ result$.subscribe(console.log);
 ## tap
 
 ```js
-const observable$ = from([1,2,3]);
+const observable$ = from([1, 2, 3]);
 const result$ = observable$.pipe(tap(someSideEffectFunction));
 
 result$.subscribe(console.log);
