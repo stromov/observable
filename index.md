@@ -228,6 +228,9 @@ result.subscribe(console.log);
 // 20
 // 30
 ```
+
+## mapTo
+
 ```js
 const observable = from([1,2,3]);
 const result = observable.pipe(mapTo(42));
