@@ -456,11 +456,10 @@ merge(async$, asap$, queue$, animationFrame$).subscribe(console.log);
 ```
 
 ## Рекомендации
-
-- [Прочитайте документацию] (https://rxjs.dev/)
+- [Прочитайте документацию](https://rxjs.dev/)
 - Поиграйтесь в "песочнице" с примерами
 - Попробуйте придумать свои примеры
-- [Видео об очень распространённом способе использования RxJS с Redux] (https://youtu.be/AslncyG8whg)
+- [Видео](https://youtu.be/AslncyG8whg) об очень распространённом способе использования RxJS с Redux
 
 ## Спасибо за внимание!
 {:.section}
