@@ -306,6 +306,30 @@ result.subscribe(console.log);
 // 3
 ```
 
+## Операторы высшего порядка
+{:.section}
+
+### mergeMap, switchMap
+
+## mergeMap
+
+```js
+const letterObservable = of('a', 'b');
+const result = letterObservable.pipe(
+  mergeMap(letter => interval(1000).pipe(take(2),map(i => `${letter} ${i}`))),
+);
+
+result.subscribe(console.log);
+
+// a 0
+// b 0
+// a 1
+// b 1
+```
+
+{:.images}
+![](pictures/mergeMap.png)
+
 ## Контакты 
 {:.contacts}
 
