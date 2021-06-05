@@ -81,7 +81,6 @@ const observable = new Observable(subscriber => {
 ## Subscribe
 
 ```js
-// code
 console.log('just before subscribe');
 observable.subscribe({
   next(x) { console.log(x); },
