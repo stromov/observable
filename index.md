@@ -309,7 +309,7 @@ result.subscribe(console.log);
 
 ```js
 const observable = from([1,2,3]);
-const result = observable.pipe(x => someSideEffectFunction(x));
+const result = observable.pipe(tap(someSideEffectFunction));
 
 result.subscribe(console.log);
  
