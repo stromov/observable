@@ -377,6 +377,33 @@ const result = outerInterval.pipe(
 {:.images}
 ![](pictures/switchMap.png)
 
+## Обрабатываем ошибки
+{:.section}
+
+### catchError
+
+## catchError
+
+```js
+const observable = of(1, 2, 3);
+const result = observable.pipe(
+  map(n => {
+    if (n === 3) {
+      throw new Error();
+    }
+    return n;
+  }),
+  catchError(() => of(30, 40))
+);
+
+result.subscribe(console.log);
+
+// 1
+// 2
+// 30
+// 40
+```
+
 ## Контакты 
 {:.contacts}
 
