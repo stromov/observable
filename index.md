@@ -63,7 +63,7 @@ const observable$ = new Observable(({next, complete, error}) => {/* some code */
 |  Сигнализирует о завершении                |  resolve   |  complete   |
 
 
-## Пример Observable
+## Создаём Observable
 
 ```js
 const observable$ = new Observable(subscriber => {
