@@ -53,7 +53,7 @@ const promise = new Promise((resolve, reject) => {/* some code */})
 ```
 
 ```js
-const observable = new Observable(({next, complete, error}) => {/* some code */})
+const observable$ = new Observable(({next, complete, error}) => {/* some code */})
 ```
 
 |                                            |  Promise   |  Observable |
