@@ -411,6 +411,20 @@ result.subscribe(console.log);
 ## Subject
 {:.section}
 
+## Subject
+
+```js
+const subject = new Subject();
+ 
+subject.subscribe(console.log);
+ 
+subject.next(1);
+subject.next(2);
+
+// 1
+// 2
+```
+
 ## Контакты 
 {:.contacts}
 
