@@ -203,6 +203,80 @@ concat(observable, anotherObservable)
 {:.images}
 ![](pictures/concat.png)
 
+## Обработка потока
+{:.section}
+
+### pipe, map, mapTo, filter, reduce
+
+## pipe
+
+Метод pipe есть у каждого потока. Он принимает в качестве аргументов операторы для обработки потока.
+
+```js
+observable.pipe(...someOperators);
+```
+
+## map
+
+```js
+const observable = from([1,2,3]);
+const result = observable.pipe(map(value => value * 10));
+
+result.subscribe(console.log);
+
+// 10
+// 20
+// 30
+```
+```js
+const observable = from([1,2,3]);
+const result = observable.pipe(mapTo(42));
+
+result.subscribe(console.log);
+
+// 42
+// 42
+// 42
+```
+
+## filter
+
+```js
+const observable = from([1,2,3]);
+const result = observable.pipe(filter(value => value % 2));
+
+result.subscribe(console.log);
+
+// 1
+// 3
+```
+
+## reduce
+
+```js
+const observable = from([1,2,3]);
+const result = observable.pipe(reduce((acc, value) => acc + value, 0));
+
+result.subscribe(console.log);
+
+// 6
+```
+
+## Операторы можно объединять
+
+```js
+const observable = from([1,2,3]);
+const result = observable.pipe(
+        map(value => value * 10),
+        filter(value => value % 20),
+        reduce((acc, value) => acc + value, 0)
+    );
+
+result.subscribe(console.log);
+
+// 40
+```
+
 ## Контакты 
 {:.contacts}
 
