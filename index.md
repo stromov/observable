@@ -348,7 +348,6 @@ result.subscribe(console.log);
 ## switchMap
 
 ```js
-// code
 const outerInterval = 
     interval(1500).pipe(take(2));
 const result = outerInterval.pipe(
@@ -360,9 +359,8 @@ const result = outerInterval.pipe(
         )
     )
   )
-);
+).subscribe(console.log);
 
-result.subscribe(console.log);
 ```
 {:style="float:left;"}
 ```js
