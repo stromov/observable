@@ -349,13 +349,15 @@ result.subscribe(console.log);
 
 ```js
 // code
-const outerInterval = interval(1500)
-    .pipe(take(2));
+const outerInterval = 
+    interval(1500).pipe(take(2));
 const result = outerInterval.pipe(
   switchMap(letter =>
     interval(1000).pipe(
       take(3),
-      map(outerValue => `${outerValue} ${i}`)
+      map(outerValue => 
+        `${outerValue} ${i}`
+        )
     )
   )
 );
