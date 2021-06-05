@@ -439,6 +439,23 @@ subject.next(2);
 |  asyncScheduler          |  макрозадачи                 |
 |  animationFrameScheduler |  перед перерисовкой контента | 
 
+## Порядок выполнения Schedulers
+
+```js
+const queue$ = of("queueScheduler").pipe(observeOn(queueScheduler));
+const asap$ = of("asapScheduler").pipe(observeOn(asapScheduler));
+const async$ = of("asyncScheduler").pipe(observeOn(asyncScheduler));
+const animationFrame$ = of("animationFrameScheduler").pipe(
+  observeOn(animationFrameScheduler)
+);
+merge(async$, asap$, queue$, animationFrame$).subscribe(console.log);
+
+// queueScheduler
+// asapScheduler
+// animationFrameScheduler
+// asyncScheduler
+```
+
 ## Контакты 
 {:.contacts}
 
