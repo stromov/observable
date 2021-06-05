@@ -206,7 +206,7 @@ concat(observable, anotherObservable)
 ## Обработка потока
 {:.section}
 
-### pipe, map, mapTo, filter, reduce, tap
+### pipe, map, mapTo, filter, take, reduce, tap
 
 ## pipe
 
@@ -252,6 +252,19 @@ result.subscribe(console.log);
 
 // 1
 // 3
+```
+
+## take
+
+```js
+const myInterval = interval(1000)
+const result = myInterval.pipe(take(3))
+
+result.subscribe(console.log);
+
+// 0
+// 1
+// 2
 ```
 
 ## reduce
@@ -331,6 +344,33 @@ result.subscribe(console.log);
 
 {:.images}
 ![](pictures/mergeMap.png)
+
+## switchMap
+
+```js
+const outerInterval = interval(1500).pipe(take(2));
+const result = outerInterval.pipe(
+  switchMap(letter =>
+    interval(1000).pipe(
+      take(3),
+      map(outerIntervalValue => `${outerIntervalValue} ${i}`)
+    )
+  )
+);
+
+result.subscribe(console.log);
+
+// 0 0
+// 0 1
+// 1 0
+// 1 1
+// 1 2
+```
+
+## switchMap
+
+{:.images}
+![](pictures/switchMap.png)
 
 ## Контакты 
 {:.contacts}
