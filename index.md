@@ -397,12 +397,16 @@ const result = observable.pipe(
 );
 
 result.subscribe(console.log);
-
-// 1
-// 2
-// 30
-// 40
 ```
+{:style="float:left;"}
+```js
+    // console
+    1
+    2
+    30
+    40
+```
+{:.image-right}
 
 ## Контакты 
 {:.contacts}
