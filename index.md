@@ -348,6 +348,7 @@ result.subscribe(console.log);
 ## switchMap
 
 ```js
+// code
 const outerInterval = interval(1500).pipe(take(2));
 const result = outerInterval.pipe(
   switchMap(letter =>
@@ -359,13 +360,17 @@ const result = outerInterval.pipe(
 );
 
 result.subscribe(console.log);
-
-// 0 0
-// 0 1
-// 1 0
-// 1 1
-// 1 2
 ```
+{:style="float:left;"}
+```js
+    // console
+    0 0
+    0 1
+    1 0
+    1 1
+    1 2
+```
+{:.image-right}
 
 ## switchMap
 
