@@ -316,7 +316,8 @@ result.subscribe(console.log);
 ```js
 const letterObservable = of('a', 'b');
 const result = letterObservable.pipe(
-  mergeMap(letter => interval(1000).pipe(take(2),map(i => `${letter} ${i}`))),
+  mergeMap(letter => 
+    interval(1000).pipe(take(2), map(i => `${letter} ${i}`))),
 );
 
 result.subscribe(console.log);
@@ -326,6 +327,7 @@ result.subscribe(console.log);
 // a 1
 // b 1
 ```
+## mergeMap
 
 {:.images}
 ![](pictures/mergeMap.png)
