@@ -256,8 +256,8 @@ result.subscribe(console.log);
 ## take
 
 ```js
-const myInterval = interval(1000)
-const result = myInterval.pipe(take(3))
+const myInterval = interval(1000);
+const result = myInterval.pipe(take(3));
 
 result.subscribe(console.log);
 
@@ -424,6 +424,20 @@ subject.next(2);
 // 1
 // 2
 ```
+
+## Schedulers
+{:.section}
+
+### queueScheduler, asapScheduler, asyncScheduler, animationFrameScheduler
+
+## Планировщики и очереди
+
+|   Планировщик            |         Очередь              |
++--------------------------|------------------------------+
+|  queueScheduler          |  синхронный код              |
+|  asapScheduler           |  микрозадачи                 |
+|  asyncScheduler          |  макрозадачи                 |
+|  animationFrameScheduler |  перед перерисовкой контента | 
 
 ## Контакты 
 {:.contacts}
