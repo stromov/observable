@@ -380,9 +380,6 @@ outerInterval$.pipe(
 ```
 {:.image-right}
 
-{:.images}
-![](pictures/switchMap.png)
-
 ## mergeMap и switchMap
 {:.images .two}
 
