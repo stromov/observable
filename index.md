@@ -12,7 +12,7 @@ style: |
 
     #mergeMap img,
     #switchMap img {
-        height: 850px;
+        height: 800px;
     }
 
 
