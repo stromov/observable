@@ -380,6 +380,11 @@ outerInterval$.pipe(
 ```
 {:.image-right}
 
+## switchMap
+
+{:.images}
+![](pictures/switchMap.png)
+
 ## mergeMap и switchMap
 {:.images #full-screen}
 
