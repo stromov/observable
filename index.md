@@ -323,10 +323,6 @@ result$.subscribe(console.log);
 
 ## mergeMap
 
-{:.images}
-![](pictures/mergeMap.png)
-## mergeMap
-
 ```js
 const letterObservable$ = of('a', 'b');
 const result$ = letterObservable$.pipe(
@@ -342,10 +338,10 @@ result$.subscribe(console.log);
 // b 1
 ```
 
-## switchMap
+## mergeMap
 
 {:.images}
-![](pictures/switchMap.png)
+![](pictures/mergeMap.png)
 
 ## switchMap
 
@@ -372,6 +368,11 @@ const result$ = outerInterval$.pipe(
     1 2
 ```
 {:.image-right}
+
+## switchMap
+
+{:.images}
+![](pictures/switchMap.png)
 
 ## Обрабатываем ошибки
 {:.section}
