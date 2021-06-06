@@ -5,7 +5,7 @@ layout: yandex2
 style: |
     /* собственные стили можно писать здесь!! */
 
-    #observer-iterator img {
+    #full-screen img {
         width: 100%;
         margin-top: 50px;
     }
@@ -43,7 +43,7 @@ style: |
 
 ## Observer + Iterator = Observable
 
-{:.images #observer-iterator}
+{:.images #full-screen}
 ![](pictures/IteratorAndObserver.png)
 
 ## Promise и Observable
@@ -381,7 +381,7 @@ outerInterval$.pipe(
 {:.image-right}
 
 ## mergeMap и switchMap
-{:.images}
+{:.images #full-screen}
 
 ![](pictures/mergeMapAndSwitchMap.png)
 
