@@ -186,7 +186,7 @@ clicks$.subscribe(console.log);
 ## merge
 
 ```js
-merge(...observables$);
+merge(...observableArray$);
 ```
 
 {:.images}
@@ -194,7 +194,7 @@ merge(...observables$);
 
 ## concat
 ```js
-concat(...observables$)
+concat(...observableArray$)
 ``` 
 
 {:.images}
