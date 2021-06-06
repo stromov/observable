@@ -10,6 +10,11 @@ style: |
         margin-top: 50px;
     }
 
+    #mergeMap img,
+    #switchMap img {
+        height: 850px;
+    }
+
 
 ---
 
@@ -350,7 +355,7 @@ outerInterval$.pipe(
 
 ## mergeMap
 
-{:.images}
+{:.images #mergeMap}
 ![](pictures/mergeMap.png)
 
 ## switchMap
@@ -382,7 +387,7 @@ outerInterval$.pipe(
 
 ## switchMap
 
-{:.images}
+{:.images #switchMap}
 ![](pictures/switchMap.png)
 
 ## mergeMap и switchMap
