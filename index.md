@@ -243,7 +243,7 @@ result$.subscribe(console.log);
 
 ```js
 const observable$ = from([1, 2, 3]);
-const result$ = observable$.pipe(filter(value => value % 2));
+const result$ = observable$.pipe(filter(value => value % 2 === 0));
 
 result$.subscribe(console.log);
 
