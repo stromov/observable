@@ -326,7 +326,8 @@ result$.subscribe(console.log);
 ```js
 const outerInterval$ = 
     interval(1500).pipe(take(2));
-const result$ = outerInterval$.pipe(
+
+outerInterval$.pipe(
   switchMap(outerValue =>
     interval(1000).pipe(
       take(3),
@@ -357,7 +358,8 @@ const result$ = outerInterval$.pipe(
 ```js
 const outerInterval$ = 
     interval(1500).pipe(take(2));
-const result$ = outerInterval$.pipe(
+
+outerInterval$.pipe(
   switchMap(outerValue =>
     interval(1000).pipe(
       take(3),
@@ -378,10 +380,17 @@ const result$ = outerInterval$.pipe(
 ```
 {:.image-right}
 
-## switchMap
-
 {:.images}
 ![](pictures/switchMap.png)
+
+## mergeMap и switchMap
+{:.images .two}
+
+![](pictures/mergeMap.png)
+*mergeMap*
+
+![](pictures/switchMap.png)
+*switchMap*
 
 ## Обрабатываем ошибки
 {:.section}
