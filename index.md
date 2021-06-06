@@ -324,19 +324,28 @@ result$.subscribe(console.log);
 ## mergeMap
 
 ```js
-const letterObservable$ = of('a', 'b');
-const result$ = letterObservable$.pipe(
-  mergeMap(letter => 
-    interval(1000).pipe(take(2), map(i => `${letter} ${i}`))),
-);
-
-result$.subscribe(console.log);
-
-// a 0
-// b 0
-// a 1
-// b 1
+const outerInterval$ = 
+    interval(1500).pipe(take(2));
+const result$ = outerInterval$.pipe(
+  switchMap(outerValue =>
+    interval(1000).pipe(
+      take(3),
+      map(i => `${outerValue} ${i}`)
+    )
+  )
+).subscribe(console.log);
 ```
+{:style="float:left;"}
+```js
+    // console
+    0 0
+    0 1
+    1 0
+    0 2
+    1 1
+    1 2
+```
+{:.image-right}
 
 ## mergeMap
 
