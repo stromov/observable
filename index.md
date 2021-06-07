@@ -148,6 +148,23 @@ console.log('after subscribe')
 |  Обработка ошибки при завершении                |  catch     |  subscribe  |
 |  Обработка ошибки завершении операции/потока    |  then      |  subscribe  |
 
+## Subject
+{:.section}
+
+## Subject
+
+```js
+const subject = new Subject();
+ 
+subject.subscribe(console.log);
+ 
+subject.next(1);
+subject.next(2);
+
+// 1
+// 2
+```
+
 ## Хелперы для создания Observable
 {:.section}
 
@@ -354,7 +371,7 @@ result$.subscribe(console.log);
 const myInterval$ = interval(1000);
 const clicks$ = fromEvent(document, 'click');
 const result$ = myInterval$.pipe(takeUntil(clicks$));
-result.subscribe(console.log);
+result$.subscribe(console.log);
 ```
 ```js
 // 0
@@ -527,23 +544,6 @@ result$.subscribe(console.log);
     40
 ```
 {:.image-right}
-
-## Subject
-{:.section}
-
-## Subject
-
-```js
-const subject = new Subject();
- 
-subject.subscribe(console.log);
- 
-subject.next(1);
-subject.next(2);
-
-// 1
-// 2
-```
 
 ## Schedulers
 {:.section}
