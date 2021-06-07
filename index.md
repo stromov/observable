@@ -74,15 +74,15 @@ const promise = new Promise(
 ```js
 const observable$ = new Observable(
   ({next, error, complete}) => {
-  next(1);
-  try {
-    setTimeout(() => {
-      next(2);
-      complete();
-    }, 1000);
-  } catch (error) {
-    error(error);
-  }
+    next(1);
+    try {
+      setTimeout(() => {
+        next(2);
+        complete();
+      }, 1000);
+    } catch (error) {
+      error(error);
+    }
 });
 ```
 {:.image-right}
@@ -130,6 +130,12 @@ promise
 |  Обработка успешного результата при завершении  |  then      |  subscribe  |
 |  Обработка ошибки при завершении                |  catch     |  subscribe  |
 |  Обработка ошибки завершении операции/потока    |  then      |  subscribe  |
+
+|                                            |  Promise   |  Observable |
++--------------------------------------------|------------|-------------+
+|  Обрабатывает значение в случае успеха     |  resolve   |  next       |
+|  Обрабатывает значение в случае ошибки     |  reject    |  error      |
+|  Сигнализирует о завершении                |  resolve   |  complete   |
 ## Unsubscribe
 
 Не забываем отписываться от потоков, особенно от <b>бесконечных</b>!
