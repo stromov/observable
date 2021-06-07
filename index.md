@@ -92,12 +92,15 @@ observable$.subscribe(
   complete() { console.log('done'); }
 );
 ```
+{:style="float:left;"}
 ```js
 promise
   .then(console.log)
   .catch(() => console.log('Smth went wrong'));
 ```
-{:style="float:left;"}
+{:.image-right}
+
+## Результаты Promise и Observable
 ```js
     // observable
     1
@@ -105,11 +108,11 @@ promise
     just after subscribe
     3
     done
-
+```
+```js
     // promise
     result
 ```
-{:.image-right}
 
 ## Promise и Observable
 |                                            |  Promise   |  Observable |
