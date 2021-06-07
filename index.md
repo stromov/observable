@@ -281,6 +281,7 @@ result$.subscribe(console.log);
 // 42
 ```
 {:style="float:left;"}
+
 {:.image-right #operatorChart}
 ![](pictures/mapTo.png)
 
@@ -297,6 +298,7 @@ result$.subscribe(console.log);
 // 3
 ```
 {:style="float:left;"}
+
 {:.image-right #operatorChart}
 ![](pictures/filter.png)
 
@@ -311,6 +313,7 @@ result$.subscribe(console.log);
 // 6
 ```
 {:style="float:left;"}
+
 {:.image-right #operatorChart}
 ![](pictures/reduce.png)
 
@@ -328,8 +331,46 @@ result$.subscribe(console.log);
 // 2
 ```
 {:style="float:left;"}
+
 {:.image-right #operatorChart}
 ![](pictures/take.png)
+
+## distinctUntilChanged
+
+```js
+const observable$ = from([1, 2, 2, 3, 3, 3]);
+const result$ = observable$.pipe(distinctUntilChanged());
+
+result$.subscribe(console.log);
+```
+```js
+// 1
+// 2
+// 3
+```
+{:style="float:left;"}
+
+{:.image-right #operatorChart}
+![](pictures/distinctUntilChanged.png)
+
+## tap
+
+```js
+const observable$ = from([1, 2, 3]);
+const result$ = observable$.pipe(tap(someSideEffectFunction));
+
+result$.subscribe(console.log);
+```
+```js
+// 1
+// 2
+// 3
+```
+{:style="float:left;"}
+
+{:.image-right #operatorChart}
+![](pictures/tap.png)
+
 
 ## Операторы можно объединять
 
@@ -344,32 +385,6 @@ const result$ = observable$.pipe(
 result$.subscribe(console.log);
 
 // 40
-```
-
-## distinctUntilChanged
-
-```js
-const observable$ = from([1, 2, 2, 3, 3, 3]);
-const result$ = observable$.pipe(distinctUntilChanged());
-
-result$.subscribe(console.log);
-
-// 1
-// 2
-// 3
-```
-
-## tap
-
-```js
-const observable$ = from([1, 2, 3]);
-const result$ = observable$.pipe(tap(someSideEffectFunction));
-
-result$.subscribe(console.log);
- 
-// 1
-// 2
-// 3
 ```
 
 ## Операторы высшего порядка
