@@ -179,6 +179,11 @@ observableFromPromise$.subscribe(console.log);
 // result
 ```
 
+## from
+
+{:.images}
+![](pictures/merge.png)
+
 ```js
 const observableFromArray$ = from([1, 2, 3]);
 observableFromArray$.subscribe(console.log);
