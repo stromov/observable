@@ -131,7 +131,7 @@ console.log('after subscribe')
 ```js
     // observable
     1
-    just after subscribe
+    after subscribe
     2
     done
 ```
@@ -141,12 +141,12 @@ console.log('after subscribe')
 
 |                                                 |  Promise   |  Observable |
 +-------------------------------------------------|------------|-------------+
-|  Обрабатывает значение в случае успеха          |  resolve   |  next       |
-|  Обрабатывает значение в случае ошибки          |  reject    |  error      |
-|  Сигнализирует о завершении                     |  resolve   |  complete   |
-|  Обработка успешного результата при завершении  |  then      |  subscribe  |
-|  Обработка ошибки при завершении                |  catch     |  subscribe  |
-|  Обработка ошибки завершении операции/потока    |  then      |  subscribe  |
+|  Обрабатывает значение в случае успеха          |  resolve   |  next                  |
+|  Обрабатывает значение в случае ошибки          |  reject    |  error                 |
+|  Сигнализирует о завершении                     |  resolve   |  complete              |
+|  Получает значение в случае успеха              |  then      |  subscribe (next)      |
+|  Обработка ошибки при завершении с ошибкой      |  catch     |  subscribe (error)     |
+|  Срабатывает в момент завершения                |  then      |  subscribe (complete)  |
 
 ## Subject
 {:.section}
@@ -196,15 +196,15 @@ observableFromArray$.subscribe(console.log);
 ## of
 
 ```js
-of(10, 20, 30).subscribe(
+of(1, 2, 3).subscribe(
   next => console.log('next:', next),
   err => console.log('error:', err),
   () => console.log('the end'),
 );
 
-// next: 10
-// next: 20
-// next: 30
+// next: 1
+// next: 2
+// next: 3
 // the end
 ```
 
