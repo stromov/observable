@@ -188,14 +188,6 @@ observableFromArray$.subscribe(console.log);
 // 3
 ```
 
-## from
-
-{:.images}
-![](pictures/Promise.png)
-
-{:.images}
-![](pictures/fromAndOf.png)
-
 ## of
 
 ```js
@@ -210,10 +202,6 @@ of(10, 20, 30).subscribe(
 // next: 30
 // the end
 ```
-
-# of
-{:.images}
-![](pictures/fromAndOf.png)
 
 ## timer и interval
 
@@ -235,11 +223,6 @@ interval(1000).subscribe(console.log)
 // ...
 ```
 
-## timer и interval
-
-{:.images}
-![](pictures/timerAndInterval.png)
-
 ## fromEvent
 
 ```js
@@ -248,11 +231,6 @@ clicks$.subscribe(console.log);
 
 // При клике на document выведется объект MouseEvent
 ```
-
-## fromEvent
-
-{:.images}
-![](pictures/fromEvent.png)
 
 ## Unsubscribe
 
