@@ -461,10 +461,6 @@ click$
   )
   .subscribe(console.log);
 ```
-{:style="float:left;"}
-
-{:.image-right}
-![](pictures/mergeMap.png)
 
 ## mergeMap
 
