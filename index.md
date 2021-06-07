@@ -399,6 +399,11 @@ result$.subscribe(console.log);
 // 40
 ```
 
+## Операторы можно объединять
+
+{:.images}
+![](pictures/pipe.png)
+
 ## Операторы высшего порядка
 {:.section}
 
