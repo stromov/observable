@@ -57,17 +57,19 @@ style: |
 ## Promise и Observable
 
 ```js
-const promise = new Promise((resolve, reject) => {
-  try {
-    setTimeout(() => resolve('result'), 1000);
-  } catch (error) {
-    reject(error);
-  }
+const promise = new Promise(
+  (resolve, reject) => {
+    try {
+      setTimeout(() => resolve('result'), 1000);
+    } catch (error) {
+      reject(error);
+    }
 });
 ```
-
+{:style="float:left;"}
 ```js
-const observable$ = new Observable({next, error, complete} => {
+const observable$ = new Observable(
+  ({next, error, complete}) => {
   next(1);
   next(2);
   try {
@@ -78,10 +80,9 @@ const observable$ = new Observable({next, error, complete} => {
   } catch (error) {
     error(error);
   }
-  console.log('after subscribe')
-
 });
 ```
+{:.image-right}
 
 ## subscribe/then error/catch
 
@@ -91,6 +92,7 @@ observable$.subscribe(
   error(err) { console.error(err); },
   complete() { console.log('done'); }
 );
+console.log('after subscribe')
 ```
 {:style="float:left;"}
 ```js
