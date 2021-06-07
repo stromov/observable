@@ -90,6 +90,12 @@ const observable$ = new Observable(
 ## subscribe/then error/catch
 
 ```js
+promise
+  .then(console.log)
+  .catch(() => console.log('Error'));
+```
+{:style="float:left;"}
+```js
 observable$.subscribe(
   next(x) { console.log(x); },
   error(err) { console.error(err); },
@@ -97,26 +103,21 @@ observable$.subscribe(
 );
 console.log('after subscribe')
 ```
-{:style="float:left;"}
-```js
-promise
-  .then(console.log)
-  .catch(() => console.log('Error'));
-```
 {:.image-right}
 
 ## Результаты Promise и Observable
+
+```js
+    // promise
+    result
+```
+{:style="float:left;"}
 ```js
     // observable
     1
     just after subscribe
     2
     done
-```
-{:style="float:left;"}
-```js
-    // promise
-    result
 ```
 {:.image-right}
 
