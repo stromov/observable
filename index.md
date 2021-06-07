@@ -46,6 +46,9 @@ style: |
 - Соответсвует одной асинхронной операции
 - Позволяет обработать результат асинхронной операции
 
+## Observable
+{:.section}
+
 ## Observer + Iterator = Observable
 
 {:.images #full-screen}
