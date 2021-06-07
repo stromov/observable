@@ -57,57 +57,66 @@ style: |
 ## Promise и Observable
 
 ```js
-const promise = new Promise((resolve, reject) => {/* some code */});
-```
-
-```js
-const observable$ = new Observable(({next, complete, error}) => {/* some code */});
-```
-
-|                                            |  Promise   |  Observable |
-+--------------------------------------------|------------|-------------+
-|  Обрабатывает значение в случае успеха     |  resolve   |  next       |
-|  Обрабатывает значение в случае ошибки     |  reject    |  error      |
-|  Сигнализирует о завершении                |  resolve   |  complete   |
-
-
-## Создаём Observable
-
-```js
-const observable$ = new Observable(subscriber => {
-  subscriber.next(1);
-  subscriber.next(2);
-  subscriber.next(3);
-  setTimeout(() => {
-    subscriber.next(4);
-    subscriber.complete();
-  }, 1000);
+const promise = new Promise((resolve, reject) => {
+  try {
+    setTimeout(() => resolve('result'), 1000);
+  } catch (error) {
+    reject(error);
+  }
 });
 ```
 
-## Subscribe
+```js
+const observable$ = new Observable({next, error, complete} => {
+  next(1);
+  next(2);
+  try {
+    setTimeout(() => {
+      next(3);
+      complete();
+    }, 1000);
+  } catch (error) {
+    error(error);
+  }
+  console.log('after subscribe')
+
+});
+```
+
+## subscribe/then error/catch
 
 ```js
-console.log('just before subscribe');
 observable$.subscribe(
   next(x) { console.log(x); },
   error(err) { console.error(err); },
   complete() { console.log('done'); }
 );
-console.log('just after subscribe');
+```
+```js
+promise
+  .then(console.log)
+  .catch(() => console.log('Smth went wrong'));
 ```
 {:style="float:left;"}
 ```js
-    // console
-    just before subscribe
+    // observable
     1
     2
-    3
     just after subscribe
-    4
+    3
     done
+
+    // promise
+    result
 ```
 {:.image-right}
+
+## Promise и Observable
+|                                            |  Promise   |  Observable |
++--------------------------------------------|------------|-------------+
+|  Обрабатывает значение в случае успеха     |  resolve   |  next       |
+|  Обрабатывает значение в случае ошибки     |  reject    |  error      |
+|  Сигнализирует о завершении                |  resolve   |  complete   |
 ## Unsubscribe
 
 Не забываем отписываться от потоков, особенно от <b>бесконечных</b>!
