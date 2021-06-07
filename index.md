@@ -453,7 +453,7 @@ const click$ = fromEvent(document, 'click');
 click$
   .pipe(
     mergeMap(event => {
-      return someRequest({
+      return asyncRequest({
         x: event.clientX,
         y: event.clientY
       });
@@ -461,6 +461,10 @@ click$
   )
   .subscribe(console.log);
 ```
+{:style="float:left;"}
+
+{:.image-right}
+![](pictures/mergeMap.png)
 
 ## mergeMap
 
@@ -475,7 +479,7 @@ const click$ = fromEvent(document, 'click');
 click$
   .pipe(
     switchMap(event => {
-      return someRequest({
+      return asyncRequest({
         x: event.clientX,
         y: event.clientY
       });
