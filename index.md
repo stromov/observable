@@ -309,7 +309,8 @@ const observable$ = from([1, 2, 3]);
 const result$ = observable$.pipe(reduce((acc, value) => acc + value, 0));
 
 result$.subscribe(console.log);
-
+```
+```js
 // 6
 ```
 {:style="float:left;"}
