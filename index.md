@@ -212,7 +212,7 @@ of(10, 20, 30).subscribe(
 ## of
 
 {:.images}
-![](pictures/from.png)
+![](pictures/of.png)
 
 ## timer и interval
 
@@ -234,6 +234,11 @@ interval(1000).subscribe(console.log)
 // ...
 ```
 
+## timer и interval
+
+{:.images}
+![](pictures/timerAndInterval.png)
+
 ## fromEvent
 
 ```js
@@ -243,6 +248,10 @@ clicks$.subscribe(console.log);
 // При клике на document выведется объект MouseEvent
 ```
 
+## fromEvent
+
+{:.images}
+![](pictures/fromEvent.png)
 ## Unsubscribe
 
 Не забываем отписываться от потоков, особенно от <b>бесконечных</b>!
