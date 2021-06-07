@@ -274,12 +274,14 @@ const observable$ = from([1, 2, 3]);
 const result$ = observable$.pipe(mapTo(42));
 
 result$.subscribe(console.log);
-
+```
+```js
 // 42
 // 42
 // 42
 ```
-{:.images}
+{:style="float:left;"}
+{:.image-right #operatorChart}
 ![](pictures/mapTo.png)
 
 ## filter
@@ -289,11 +291,13 @@ const observable$ = from([1, 2, 3]);
 const result$ = observable$.pipe(filter(value => value % 2 === 0));
 
 result$.subscribe(console.log);
-
+```
+```js
 // 1
 // 3
 ```
-{:.images}
+{:style="float:left;"}
+{:.image-right #operatorChart}
 ![](pictures/filter.png)
 
 ## reduce
@@ -306,7 +310,8 @@ result$.subscribe(console.log);
 
 // 6
 ```
-{:.images}
+{:style="float:left;"}
+{:.image-right #operatorChart}
 ![](pictures/reduce.png)
 
 ## take
@@ -316,12 +321,14 @@ const myInterval$ = interval(1000);
 const result$ = myInterval$.pipe(take(3));
 
 result$.subscribe(console.log);
-
+```
+```js
 // 0
 // 1
 // 2
 ```
-{:.images}
+{:style="float:left;"}
+{:.image-right #operatorChart}
 ![](pictures/take.png)
 
 ## Операторы можно объединять
