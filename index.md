@@ -132,17 +132,6 @@ console.log('after subscribe')
 |  Обработка ошибки при завершении                |  catch     |  subscribe  |
 |  Обработка ошибки завершении операции/потока    |  then      |  subscribe  |
 
-## Unsubscribe
-
-Не забываем отписываться от потоков, особенно от <b>бесконечных</b>!
-
-```js
-const observable$ = interval(1000);
-const subscription = observable$.subscribe(console.log);
-
-subscription.unsubscribe();
-```
-
 ## Хелперы для создания Observable
 {:.section}
 
@@ -208,6 +197,17 @@ const clicks$ = fromEvent(document, 'click');
 clicks$.subscribe(console.log);
 
 // При клике на document выведется объект MouseEvent
+```
+
+## Unsubscribe
+
+Не забываем отписываться от потоков, особенно от <b>бесконечных</b>!
+
+```js
+const observable$ = interval(1000);
+const subscription = observable$.subscribe(console.log);
+
+subscription.unsubscribe();
 ```
 
 ## Методы комбинирования потоков
@@ -283,6 +283,17 @@ result$.subscribe(console.log);
 // 3
 ```
 
+## reduce
+
+```js
+const observable$ = from([1, 2, 3]);
+const result$ = observable$.pipe(reduce((acc, value) => acc + value, 0));
+
+result$.subscribe(console.log);
+
+// 6
+```
+
 ## take
 
 ```js
@@ -294,17 +305,6 @@ result$.subscribe(console.log);
 // 0
 // 1
 // 2
-```
-
-## reduce
-
-```js
-const observable$ = from([1, 2, 3]);
-const result$ = observable$.pipe(reduce((acc, value) => acc + value, 0));
-
-result$.subscribe(console.log);
-
-// 6
 ```
 
 ## Операторы можно объединять
