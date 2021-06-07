@@ -14,6 +14,10 @@ style: |
     #switchMap img {
         height: 800px;
     }
+    
+    #operatorChart {
+      width: auto;
+    }
 
 
 ---
@@ -260,7 +264,7 @@ result$.subscribe(console.log);
 ```
 {:style="float:left;"}
 
-{:.image-right}
+{:.image-right #operatorChart}
 ![](pictures/map.png)
 
 ## mapTo
