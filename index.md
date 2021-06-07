@@ -146,7 +146,7 @@ console.log('after subscribe')
 |  Сигнализирует о завершении                     |  resolve   |  complete              |
 |  Получает значение в случае успеха              |  then      |  subscribe (next)      |
 |  Обработка ошибки при завершении с ошибкой      |  catch     |  subscribe (error)     |
-|  Срабатывает в момент завершения                |  then      |  subscribe (complete)  |
+|  Срабатывает в момент завершения                |  finaly    |  subscribe (complete)  |
 
 ## Subject
 {:.section}
