@@ -96,7 +96,7 @@ observable$.subscribe(
 ```js
 promise
   .then(console.log)
-  .catch(() => console.log('Smth went wrong'));
+  .catch(() => console.log('Error'));
 ```
 {:.image-right}
 
@@ -109,10 +109,12 @@ promise
     3
     done
 ```
+{:style="float:left;"}
 ```js
     // promise
     result
 ```
+{:.image-right}
 
 ## Promise и Observable
 |                                            |  Promise   |  Observable |
