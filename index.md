@@ -21,7 +21,8 @@ style: |
     #reduceChart,
     #takeChart,
     #distinctUntilChangedChart,
-    #tapChart {
+    #tapChart,
+    #takeUntilChart {
       width: auto;
     }
 
@@ -346,6 +347,24 @@ result$.subscribe(console.log);
 
 {:.image-right #takeChart}
 ![](pictures/take.png)
+
+## takeUntil
+
+```js
+const myInterval$ = interval(1000);
+const clicks$ = fromEvent(document, 'click');
+const result$ = myInterval$.pipe(takeUntil(clicks$));
+result.subscribe(console.log);
+```
+```js
+// 0
+// 1
+// 2
+```
+{:style="float:left;"}
+
+{:.image-right #takeUntilChart}
+![](pictures/takeUntil.png)
 
 ## distinctUntilChanged
 
