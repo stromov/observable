@@ -151,8 +151,6 @@ console.log('after subscribe')
 ## Subject
 {:.section}
 
-## Subject
-
 ```js
 const subject = new Subject();
  
