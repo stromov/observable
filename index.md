@@ -449,10 +449,11 @@ result$.subscribe(console.log);
 
 ```js
 const request = ({x, y}) => 
-  of(x + y).pipe(delay(Math.random() * 1000));
-
+  of(x + y)
+  .pipe(
+    delay(Math.random() * 1000)
+  );
 const click$ = fromEvent(document, 'click');
-
 click$
   .pipe(
     mergeMap(event => {
@@ -474,10 +475,11 @@ click$
 
 ```js
 const request = ({x, y}) => 
-  of(x + y).pipe(delay(Math.random() * 1000));
-
+  of(x + y)
+  .pipe(
+    delay(Math.random() * 1000)
+  );
 const click$ = fromEvent(document, 'click');
-
 click$
   .pipe(
     switchMap(event => {
