@@ -448,16 +448,12 @@ result$.subscribe(console.log);
 ## mergeMap
 
 ```js
-const request = ({x, y}) => 
-  of(x + y)
-  .pipe(
-    delay(Math.random() * 1000)
-  );
 const click$ = fromEvent(document, 'click');
+
 click$
   .pipe(
     mergeMap(event => {
-      return request({
+      return someRequest({
         x: event.clientX,
         y: event.clientY
       });
@@ -474,16 +470,12 @@ click$
 ## switchMap
 
 ```js
-const request = ({x, y}) => 
-  of(x + y)
-  .pipe(
-    delay(Math.random() * 1000)
-  );
 const click$ = fromEvent(document, 'click');
+
 click$
   .pipe(
     switchMap(event => {
-      return request({
+      return someRequest({
         x: event.clientX,
         y: event.clientY
       });
