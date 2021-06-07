@@ -54,7 +54,7 @@ style: |
 {:.images #full-screen}
 ![](pictures/IteratorAndObserver.png)
 
-## Promise и Observable
+## Сигнатура
 
 ```js
 const promise = new Promise(
@@ -75,10 +75,9 @@ const promise = new Promise(
 const observable$ = new Observable(
   ({next, error, complete}) => {
   next(1);
-  next(2);
   try {
     setTimeout(() => {
-      next(3);
+      next(2);
       complete();
     }, 1000);
   } catch (error) {
@@ -110,9 +109,8 @@ promise
 ```js
     // observable
     1
-    2
     just after subscribe
-    3
+    2
     done
 ```
 {:style="float:left;"}
@@ -123,11 +121,15 @@ promise
 {:.image-right}
 
 ## Promise и Observable
-|                                            |  Promise   |  Observable |
-+--------------------------------------------|------------|-------------+
-|  Обрабатывает значение в случае успеха     |  resolve   |  next       |
-|  Обрабатывает значение в случае ошибки     |  reject    |  error      |
-|  Сигнализирует о завершении                |  resolve   |  complete   |
+
+|                                                 |  Promise   |  Observable |
++-------------------------------------------------|------------|-------------+
+|  Обрабатывает значение в случае успеха          |  resolve   |  next       |
+|  Обрабатывает значение в случае ошибки          |  reject    |  error      |
+|  Сигнализирует о завершении                     |  resolve   |  complete   |
+|  Обработка успешного результата при завершении  |  then      |  subscribe  |
+|  Обработка ошибки при завершении                |  catch     |  subscribe  |
+|  Обработка ошибки завершении операции/потока    |  then      |  subscribe  |
 ## Unsubscribe
 
 Не забываем отписываться от потоков, особенно от <b>бесконечных</b>!
