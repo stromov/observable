@@ -15,8 +15,13 @@ style: |
         height: 800px;
     }
     
-    #operatorChart {
+    .operatorChart {
       width: auto;
+    }
+
+    #distinctUntilChanged img,
+    #take img {
+      width: 1260px;
     }
 
 
@@ -264,7 +269,7 @@ result$.subscribe(console.log);
 ```
 {:style="float:left;"}
 
-{:.image-right #operatorChart}
+{:.image-right .operatorChart}
 ![](pictures/map.png)
 
 ## mapTo
@@ -282,7 +287,7 @@ result$.subscribe(console.log);
 ```
 {:style="float:left;"}
 
-{:.image-right #operatorChart}
+{:.image-right .operatorChart}
 ![](pictures/mapTo.png)
 
 ## filter
@@ -299,7 +304,7 @@ result$.subscribe(console.log);
 ```
 {:style="float:left;"}
 
-{:.image-right #operatorChart}
+{:.image-right .operatorChart}
 ![](pictures/filter.png)
 
 ## reduce
@@ -315,7 +320,7 @@ result$.subscribe(console.log);
 ```
 {:style="float:left;"}
 
-{:.image-right #operatorChart}
+{:.image-right .operatorChart}
 ![](pictures/reduce.png)
 
 ## take
@@ -333,7 +338,7 @@ result$.subscribe(console.log);
 ```
 {:style="float:left;"}
 
-{:.image-right #operatorChart}
+{:.image-right .operatorChart #take}
 ![](pictures/take.png)
 
 ## distinctUntilChanged
@@ -351,7 +356,7 @@ result$.subscribe(console.log);
 ```
 {:style="float:left;"}
 
-{:.image-right #operatorChart}
+{:.image-right .operatorChart #distinctUntilChanged}
 ![](pictures/distinctUntilChanged.png)
 
 ## tap
@@ -369,7 +374,7 @@ result$.subscribe(console.log);
 ```
 {:style="float:left;"}
 
-{:.image-right #operatorChart}
+{:.image-right .operatorChart}
 ![](pictures/tap.png)
 
 
