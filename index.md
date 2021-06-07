@@ -258,6 +258,9 @@ result$.subscribe(console.log);
 // 30
 ```
 
+{:.images}
+![](pictures/map.png)
+
 ## mapTo
 
 ```js
@@ -270,6 +273,8 @@ result$.subscribe(console.log);
 // 42
 // 42
 ```
+{:.images}
+![](pictures/mapTo.png)
 
 ## filter
 
@@ -282,6 +287,8 @@ result$.subscribe(console.log);
 // 1
 // 3
 ```
+{:.images}
+![](pictures/filter.png)
 
 ## reduce
 
@@ -293,6 +300,8 @@ result$.subscribe(console.log);
 
 // 6
 ```
+{:.images}
+![](pictures/reduce.png)
 
 ## take
 
@@ -306,6 +315,8 @@ result$.subscribe(console.log);
 // 1
 // 2
 ```
+{:.images}
+![](pictures/take.png)
 
 ## Операторы можно объединять
 
