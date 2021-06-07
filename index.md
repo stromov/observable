@@ -60,7 +60,11 @@ style: |
 const promise = new Promise(
   (resolve, reject) => {
     try {
-      setTimeout(() => resolve('result'), 1000);
+      setTimeout(
+        () => 
+          resolve('result'), 
+          1000
+      );
     } catch (error) {
       reject(error);
     }
