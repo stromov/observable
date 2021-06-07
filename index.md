@@ -191,10 +191,7 @@ observableFromArray$.subscribe(console.log);
 ## from
 
 {:.images}
-![](pictures/Promise.png)
-
-{:.images}
-![](pictures/fromAndOf.png)
+![](pictures/from.png)
 
 ## of
 
