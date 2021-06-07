@@ -179,11 +179,6 @@ observableFromPromise$.subscribe(console.log);
 // result
 ```
 
-## from
-
-{:.images}
-![](pictures/merge.png)
-
 ```js
 const observableFromArray$ = from([1, 2, 3]);
 observableFromArray$.subscribe(console.log);
@@ -192,6 +187,11 @@ observableFromArray$.subscribe(console.log);
 // 2
 // 3
 ```
+
+## from
+
+{:.images}
+![](pictures/from.png)
 
 ## of
 
@@ -207,6 +207,12 @@ of(10, 20, 30).subscribe(
 // next: 30
 // the end
 ```
+
+
+## of
+
+{:.images}
+![](pictures/from.png)
 
 ## timer и interval
 
