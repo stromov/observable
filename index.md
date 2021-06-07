@@ -252,13 +252,15 @@ const observable$ = from([1, 2, 3]);
 const result$ = observable$.pipe(map(value => value * 10));
 
 result$.subscribe(console.log);
-
+```
+```js
 // 10
 // 20
 // 30
 ```
+{:style="float:left;"}
 
-{:.images}
+{:.image-right}
 ![](pictures/map.png)
 
 ## mapTo
