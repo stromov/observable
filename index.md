@@ -448,29 +448,22 @@ result$.subscribe(console.log);
 ## mergeMap
 
 ```js
-const outerInterval$ = 
-    interval(1500).pipe(take(2));
+const request = ({x, y}) => 
+  of(x + y).pipe(delay(Math.random() * 1000));
 
-outerInterval$.pipe(
-  switchMap(outerValue =>
-    interval(1000).pipe(
-      take(3),
-      map(i => `${outerValue} ${i}`)
-    )
+const click$ = fromEvent(document, 'click');
+
+click$
+  .pipe(
+    mergeMap(event => {
+      return request({
+        x: event.clientX,
+        y: event.clientY
+      });
+    })
   )
-).subscribe(console.log);
+  .subscribe(console.log);
 ```
-{:style="float:left;"}
-```js
-    // console
-    0 0
-    0 1
-    1 0
-    0 2
-    1 1
-    1 2
-```
-{:.image-right}
 
 ## mergeMap
 
@@ -480,29 +473,22 @@ outerInterval$.pipe(
 ## switchMap
 
 ```js
-const outerInterval$ = 
-    interval(1500).pipe(take(2));
+const request = ({x, y}) => 
+  of(x + y).pipe(delay(Math.random() * 1000));
 
-outerInterval$.pipe(
-  switchMap(outerValue =>
-    interval(1000).pipe(
-      take(3),
-      map(i => `${outerValue} ${i}`)
-    )
+const click$ = fromEvent(document, 'click');
+
+click$
+  .pipe(
+    switchMap(event => {
+      return request({
+        x: event.clientX,
+        y: event.clientY
+      });
+    })
   )
-).subscribe(console.log);
-
+  .subscribe(console.log);
 ```
-{:style="float:left;"}
-```js
-    // console
-    0 0
-    0 1
-    1 0
-    1 1
-    1 2
-```
-{:.image-right}
 
 ## switchMap
 
