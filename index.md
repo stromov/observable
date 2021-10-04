@@ -277,7 +277,7 @@ subscription.unsubscribe();
 
 ## Как использовать Debounce и Throttle?
 
-...Подключить самостоятельно из <b>отдельного пакета</b> или <b>библиотеки</b>
+Подключить самостоятельно из <b>отдельного пакета</b> или <b>библиотеки</b>
 
 ```js
 input.addEventListener('change', debounce(onChange, delayMs))
