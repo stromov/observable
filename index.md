@@ -31,7 +31,8 @@ style: |
     #distinctUntilChangedChart img,
     #mapGif img,
     #mapToGif img,
-    #takeGif img {
+    #takeGif img,
+    #switchMap img {
       width: 1260px;
     }
 
@@ -570,6 +571,11 @@ click$
 
 {:.images #switchMap}
 ![](pictures/switchMap.png)
+
+## mapTo
+
+{:.images #switchMapGif}
+![](pictures/switchMap.gif)
 
 ## mergeMap и switchMap
 {:.images #full-screen}
