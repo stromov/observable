@@ -299,7 +299,7 @@ fromEvent(inputElem, 'keyup')
 ```
 {:.next}
 
-### ...[RxJS debounce vs throttle vs audit vs sample](https://dev.to/rxjs/debounce-vs-throttle-vs-audit-vs-sample-difference-you-should-know-1f21)
+### [RxJS debounce vs throttle vs audit vs sample](https://dev.to/rxjs/debounce-vs-throttle-vs-audit-vs-sample-difference-you-should-know-1f21)
 
 ## Методы комбинирования потоков
 {:.section}
