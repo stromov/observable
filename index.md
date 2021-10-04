@@ -32,7 +32,7 @@ style: |
     #mapGif img,
     #mapToGif img,
     #takeGif img,
-    #switchMap img {
+    #switchMapGif img {
       width: 1260px;
     }
 
