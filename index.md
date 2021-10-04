@@ -11,7 +11,8 @@ style: |
     }
 
     #mergeMap img,
-    #switchMap img {
+    #switchMap img,
+    #filterGif img  {
         height: 800px;
     }
     
@@ -400,6 +401,11 @@ result$.subscribe(console.log);
 
 {:.image-right #filterChart}
 ![](pictures/filter.png)
+
+## filter
+
+{:.images #filterGif}
+![](pictures/filter.gif)
 
 ## reduce
 
