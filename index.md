@@ -28,7 +28,8 @@ style: |
 
     #takeChart img,
     #distinctUntilChangedChart img,
-    #mapGif img {
+    #mapGif img,
+    #mapToGif {
       width: 1260px;
     }
 
@@ -377,6 +378,11 @@ result$.subscribe(console.log);
 
 {:.image-right #mapToChart}
 ![](pictures/mapTo.png)
+
+## map
+
+{:.images #mapToGif}
+![](pictures/mapTo.gif)
 
 ## filter
 
