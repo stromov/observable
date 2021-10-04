@@ -29,7 +29,7 @@ style: |
     #takeChart img,
     #distinctUntilChangedChart img,
     #mapGif img,
-    #mapToGif {
+    #mapToGif img {
       width: 1260px;
     }
 
@@ -379,7 +379,7 @@ result$.subscribe(console.log);
 {:.image-right #mapToChart}
 ![](pictures/mapTo.png)
 
-## map
+## mapTo
 
 {:.images #mapToGif}
 ![](pictures/mapTo.gif)
