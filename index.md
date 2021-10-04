@@ -354,6 +354,11 @@ result$.subscribe(console.log);
 {:.image-right #mapChart}
 ![](pictures/map.png)
 
+## map
+
+{:.images}
+![](pictures/map.gif)
+
 ## mapTo
 
 ```js
