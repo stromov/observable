@@ -27,7 +27,7 @@ style: |
     }
 
     #takeChart img,
-    #distinctUntilChangedChart img
+    #distinctUntilChangedChart img,
     #mapGif img {
       width: 1260px;
     }
