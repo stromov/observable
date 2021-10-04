@@ -30,7 +30,8 @@ style: |
     #takeChart img,
     #distinctUntilChangedChart img,
     #mapGif img,
-    #mapToGif img {
+    #mapToGif img,
+    #takeGif img {
       width: 1260px;
     }
 
@@ -440,6 +441,11 @@ result$.subscribe(console.log);
 
 {:.image-right #takeChart}
 ![](pictures/take.png)
+
+## take
+
+{:.images #takeGif}
+![](pictures/take.gif)
 
 ## takeUntil
 
