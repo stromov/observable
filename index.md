@@ -262,6 +262,8 @@ const subscription = observable$.subscribe(console.log);
 
 subscription.unsubscribe();
 ```
+## Debounce и Throttle
+{:.section}
 
 ### Микропаттерны оптимизации
 ## Debounce и Throttle
