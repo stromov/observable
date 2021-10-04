@@ -27,7 +27,8 @@ style: |
     }
 
     #takeChart img,
-    #distinctUntilChangedChart img {
+    #distinctUntilChangedChart img
+    #mapGif img {
       width: 1260px;
     }
 
@@ -356,7 +357,7 @@ result$.subscribe(console.log);
 
 ## map
 
-{:.images}
+{:.images #mapGif}
 ![](pictures/maphd.gif)
 
 ## mapTo
