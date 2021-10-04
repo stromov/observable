@@ -572,7 +572,7 @@ click$
 {:.images #switchMap}
 ![](pictures/switchMap.png)
 
-## mapTo
+## switchMap
 
 {:.images #switchMapGif}
 ![](pictures/switchMap.gif)
