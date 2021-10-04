@@ -160,22 +160,6 @@ console.log('after subscribe')
 |  Обработка ошибки при завершении с ошибкой      |  catch     |  subscribe (error)     |
 |  Срабатывает в момент завершения                |  finally   |  subscribe (complete)  |
 
-## Subject
-{:.section}
-
-
-## Subject
-```js
-const subject = new Subject();
- 
-subject.subscribe(console.log);
- 
-subject.next(1);
-subject.next(2);
-
-// 1
-// 2
-```
 
 ## Хелперы для создания Observable
 {:.section}
@@ -557,6 +541,23 @@ result$.subscribe(console.log);
 ```
 {:.image-right}
 
+## Subject
+{:.section}
+
+
+## Subject
+```js
+const subject = new Subject();
+ 
+subject.subscribe(console.log);
+ 
+subject.next(1);
+subject.next(2);
+
+// 1
+// 2
+```
+
 ## Schedulers
 {:.section}
 
@@ -587,6 +588,15 @@ merge(async$, asap$, queue$, animationFrame$).subscribe(console.log);
 // animationFrameScheduler
 // asyncScheduler
 ```
+
+## Сложности
+{:.section}
+
+## Сложности
+
+- Высокий порог входа
+- Тестирование (Мраморные диаграммы)
+- Может не подходить для проекта
 
 ## Рекомендации
 - [Прочитайте документацию](https://rxjs.dev/)
