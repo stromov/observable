@@ -357,7 +357,7 @@ result$.subscribe(console.log);
 ## map
 
 {:.images}
-![](pictures/map.gif)
+![](pictures/maphd.gif)
 
 ## mapTo
 
