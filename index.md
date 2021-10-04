@@ -595,7 +595,7 @@ merge(async$, asap$, queue$, animationFrame$).subscribe(console.log);
 ## Сложности
 
 - Высокий порог входа
-- Тестирование (Мраморные диаграммы)
+- Тестирование (мраморные диаграммы)
 - Может не подходить для проекта
 
 ### [Как тестировать observable](https://www.youtube.com/watch?v=s9FY-MBW1rc)
