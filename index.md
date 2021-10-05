@@ -11,10 +11,13 @@ style: |
     }
 
     #mergeMap img,
-    #concat img,
     #switchMap img,
     #filterGif img  {
-        height: 800px;
+      height: 800px;
+    }
+
+    #concat img {
+      height: 700px;
     }
     
     #mapChart,
@@ -38,7 +41,7 @@ style: |
     }
 
     #deb-and-thr img {
-        width: 90%;
+      width: 90%;
     }
 
 
