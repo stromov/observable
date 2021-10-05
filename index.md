@@ -701,7 +701,7 @@ merge(async$, asap$, queue$, animationFrame$).subscribe(console.log);
 ## Мраморные диаграммы
 
 {:.images #marbleDiagram}
-![](pictures/margbleDiagram.png)
+![](pictures/marbleDiagram.png)
 ### [Как тестировать observable](https://www.youtube.com/watch?v=s9FY-MBW1rc)
 
 ## Рекомендации
