@@ -12,6 +12,7 @@ style: |
 
     #mergeMap img,
     #switchMap img,
+    #marbleDiagram img,
     #filterGif img  {
       height: 800px;
     }
@@ -694,9 +695,13 @@ merge(async$, asap$, queue$, animationFrame$).subscribe(console.log);
 ## Сложности
 
 - Высокий порог входа
-- Тестирование (мраморные диаграммы)
 - Может не подходить для проекта
+- Тестирование
 
+## Мраморные диаграммы
+
+{:.images #marbleDiagram}
+![](pictures/margbleDiagram.png)
 ### [Как тестировать observable](https://www.youtube.com/watch?v=s9FY-MBW1rc)
 
 ## Рекомендации
