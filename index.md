@@ -48,7 +48,7 @@ style: |
     #takeGif img,
     #switchMapGif img,
     #mergeGif img {
-      width: 100%;
+      width: 1260px;
     }
 
     #deb-and-thr img {
