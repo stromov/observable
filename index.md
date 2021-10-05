@@ -19,6 +19,16 @@ style: |
     #concat img {
       height: 700px;
     }
+
+    #filterGif,
+    #mapGif,
+    #mapToGif,
+    #takeGif,
+    #switchMapGif,
+    #mergeGif {
+      display: flex;
+      justify-content: center;
+    }
     
     #mapChart,
     #mapToChart,
@@ -38,7 +48,7 @@ style: |
     #takeGif img,
     #switchMapGif img,
     #mergeGif img {
-      width: 1260px;
+      width: 100%;
     }
 
     #deb-and-thr img {
