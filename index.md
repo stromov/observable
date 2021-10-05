@@ -11,6 +11,7 @@ style: |
     }
 
     #mergeMap img,
+    #concat img,
     #switchMap img,
     #filterGif img  {
         height: 800px;
@@ -325,7 +326,7 @@ merge(...observableArray$);
 concat(...observableArray$)
 ``` 
 
-{:.images}
+{:.images #concat}
 ![](pictures/concat.png)
 
 ## Обработка потока
