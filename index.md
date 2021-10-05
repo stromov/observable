@@ -36,7 +36,8 @@ style: |
     #mapGif img,
     #mapToGif img,
     #takeGif img,
-    #switchMapGif img {
+    #switchMapGif img,
+    #mergeGif img {
       width: 1260px;
     }
 
@@ -323,6 +324,11 @@ merge(...observableArray$);
 
 {:.images}
 ![](pictures/merge.png)
+
+## merge
+
+{:.images #mergeGif}
+![](pictures/merge.gif)
 
 ## concat
 ```js
