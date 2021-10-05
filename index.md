@@ -25,7 +25,8 @@ style: |
     #mapToGif,
     #takeGif,
     #switchMapGif,
-    #mergeGif {
+    #mergeGif,
+    #mergeMapGif {
       display: flex;
       justify-content: center;
     }
@@ -47,7 +48,8 @@ style: |
     #mapToGif img,
     #takeGif img,
     #switchMapGif img,
-    #mergeGif img {
+    #mergeGif img,
+    #mergeMapGif img {
       width: 1260px;
     }
 
@@ -569,6 +571,11 @@ click$
 
 {:.images #mergeMap}
 ![](pictures/mergeMap.png)
+
+## mergeMap
+
+{:.images #mergeMapGif}
+![](pictures/mergeMap.gif)
 
 ## switchMap
 
