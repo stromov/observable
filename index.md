@@ -28,7 +28,7 @@ style: |
     #switchMapGif,
     #mergeGif,
     #mergeMapGif,
-    #tapGif img {
+    #tapGif {
       display: flex;
       justify-content: center;
     }
