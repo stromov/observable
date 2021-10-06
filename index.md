@@ -27,7 +27,8 @@ style: |
     #takeGif,
     #switchMapGif,
     #mergeGif,
-    #mergeMapGif {
+    #mergeMapGif,
+    #tapGif img {
       display: flex;
       justify-content: center;
     }
@@ -50,7 +51,8 @@ style: |
     #takeGif img,
     #switchMapGif img,
     #mergeGif img,
-    #mergeMapGif img {
+    #mergeMapGif img,
+    #tapGif img {
       width: 1260px;
     }
 
@@ -525,6 +527,11 @@ result$.subscribe(console.log);
 
 {:.image-right #tapChart}
 ![](pictures/tap.png)
+
+## tap
+
+{:.images #tapGif}
+![](pictures/tap.gif)
 
 
 ## Операторы можно объединять
