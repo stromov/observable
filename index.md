@@ -131,15 +131,15 @@ const promise = new Promise(
 {:style="float:left;"}
 ```js
 const observable$ = new Observable(
-  ({next, error, complete}) => {
-    next(1);
+  (subscriber) => {
+    subscriber.next(1);
     try {
       setTimeout(() => {
-        next(2);
-        complete();
+        subscriber.next(2);
+        subscriber.complete();
       }, 1000);
     } catch (error) {
-      error(error);
+      subscriber.error(error);
     }
 });
 ```
@@ -154,11 +154,11 @@ promise
 ```
 {:style="float:left;"}
 ```js
-observable$.subscribe(
+observable$.subscribe({
   next(x) { console.log(x); },
   error(err) { console.error(err); },
   complete() { console.log('done'); }
-);
+});
 console.log('after subscribe')
 ```
 {:.image-right}
