@@ -181,14 +181,14 @@ console.log('after subscribe')
 
 ## Promise и Observable
 
-|                                                 |  Promise          |  Observable |
-+-------------------------------------------------|-------------------|-------------+
-|  Обрабатывает значение в случае успеха          |  resolve          |  next                 |
-|  Обрабатывает значение в случае ошибки          |  reject           |  error                |
-|  Сигнализирует о завершении                     |  resolve/reject   |  complete             |
-|  Получает значение в случае успеха              |  then             |  subscribe (next)     |
-|  Обработка ошибки при завершении с ошибкой      |  catch            |  subscribe (error)    |
-|  Срабатывает в момент завершения                |  finally          |  subscribe (complete) |
+|                                                 |  Promise   |  Observable |
++-------------------------------------------------|------------|-------------+
+|  Обрабатывает значение в случае успеха          |  resolve   |  next                  |
+|  Обрабатывает значение в случае ошибки          |  reject    |  error                 |
+|  Сигнализирует о завершении                     |  resolve   |  complete              |
+|  Получает значение в случае успеха              |  then      |  subscribe (next)      |
+|  Обработка ошибки при завершении с ошибкой      |  catch     |  subscribe (error)     |
+|  Срабатывает в момент завершения                |  finally   |  subscribe (complete)  |
 
 
 ## Хелперы для создания Observable
