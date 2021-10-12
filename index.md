@@ -23,7 +23,6 @@ style: |
 
     #filterGif,
     #mapGif,
-    #mapToGif,
     #takeGif,
     #switchMapGif,
     #mergeGif,
@@ -47,7 +46,6 @@ style: |
     #takeChart img,
     #distinctUntilChangedChart img,
     #mapGif img,
-    #mapToGif img,
     #takeGif img,
     #switchMapGif img,
     #mergeGif img,
@@ -407,11 +405,6 @@ result$.subscribe(console.log);
 
 {:.image-right #mapToChart}
 ![](pictures/mapTo.png)
-
-## mapTo
-
-{:.images #mapToGif}
-![](pictures/mapTo.gif)
 
 ## filter
 
