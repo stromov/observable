@@ -494,16 +494,16 @@ result$.subscribe(console.log);
 {:.section}
 
 ### debounce, throttle, distinctUntilChanged
-## Debounce и Throttle
+## debounce и throttle
 {:.images .two #deb-and-thr}
 
 ![](pictures/suggest.png)
 
 ![](pictures/yaMap.png)
 
-### [Что такое Throttling и Debouncing?](https://medium.com/nuances-of-programming/что-такое-throttling-и-debouncing-4f0a839769ef)
+### [Что такое throttling и debouncing?](https://medium.com/nuances-of-programming/что-такое-throttling-и-debouncing-4f0a839769ef)
 
-## Как использовать Debounce и Throttle?
+## Как использовать debounce и throttle?
 
 Подключить самостоятельно из <b>отдельного пакета</b> или <b>библиотеки</b>
 
