@@ -286,45 +286,6 @@ const subscription = observable$.subscribe(console.log);
 
 subscription.unsubscribe();
 ```
-## Debounce и Throttle
-{:.section}
-
-### Микропаттерны оптимизации
-## Debounce и Throttle
-{:.images .two #deb-and-thr}
-
-![](pictures/suggest.png)
-
-![](pictures/yaMap.png)
-
-### [Что такое Throttling и Debouncing?](https://medium.com/nuances-of-programming/что-такое-throttling-и-debouncing-4f0a839769ef)
-
-## Как использовать Debounce и Throttle?
-
-Подключить самостоятельно из <b>отдельного пакета</b> или <b>библиотеки</b>
-
-```js
-input.addEventListener('change', debounce(onChange, delayMs))
-```
-{:.next}
-
-```js
-window.addEventListener('resize', throttle(onResize, delayMs))
-```
-{:.next}
-
-```js
-// или использовать соответствующий оператор в RxJS
-fromEvent(inputElem, 'keyup')
-    .pipe(
-        debounceTime(delayMs)
-        // ...
-    )
-```
-{:.next}
-
-### [RxJS debounce vs throttle vs audit vs sample](https://dev.to/rxjs/debounce-vs-throttle-vs-audit-vs-sample-difference-you-should-know-1f21)
-
 ## Методы комбинирования потоков
 {:.section}
 
@@ -546,6 +507,46 @@ result$.subscribe(console.log);
 
 {:.images}
 ![](pictures/pipe.png)
+
+## Debounce и Throttle
+{:.section}
+
+### Микропаттерны оптимизации
+## Debounce и Throttle
+{:.images .two #deb-and-thr}
+
+![](pictures/suggest.png)
+
+![](pictures/yaMap.png)
+
+### [Что такое Throttling и Debouncing?](https://medium.com/nuances-of-programming/что-такое-throttling-и-debouncing-4f0a839769ef)
+
+## Как использовать Debounce и Throttle?
+
+Подключить самостоятельно из <b>отдельного пакета</b> или <b>библиотеки</b>
+
+```js
+input.addEventListener('change', debounce(onChange, delayMs))
+```
+{:.next}
+
+```js
+window.addEventListener('resize', throttle(onResize, delayMs))
+```
+{:.next}
+
+```js
+// или использовать соответствующий оператор в RxJS
+fromEvent(inputElem, 'keyup')
+    .pipe(
+        debounceTime(delayMs)
+        // ...
+    )
+```
+{:.next}
+
+### [RxJS debounce vs throttle vs audit vs sample](https://dev.to/rxjs/debounce-vs-throttle-vs-audit-vs-sample-difference-you-should-know-1f21)
+
 
 ## Операторы высшего порядка
 {:.section}
