@@ -446,24 +446,6 @@ result$.subscribe(console.log);
 {:.image-right #takeUntilChart}
 ![](pictures/takeUntil.png)
 
-## distinctUntilChanged
-
-```js
-const observable$ = from([1, 2, 2, 3, 3, 3]);
-const result$ = observable$.pipe(distinctUntilChanged());
-
-result$.subscribe(console.log);
-```
-```js
-// 1
-// 2
-// 3
-```
-{:style="float:left;"}
-
-{:.image-right #distinctUntilChangedChart}
-![](pictures/distinctUntilChanged.png)
-
 ## tap
 
 ```js
@@ -508,10 +490,10 @@ result$.subscribe(console.log);
 {:.images}
 ![](pictures/pipe.png)
 
-## Debounce и Throttle
+## Микропаттерны оптимизации
 {:.section}
 
-### Микропаттерны оптимизации
+### debounce, throttle, distinctUntilChanged
 ## Debounce и Throttle
 {:.images .two #deb-and-thr}
 
@@ -546,6 +528,24 @@ fromEvent(inputElem, 'keyup')
 {:.next}
 
 ### [RxJS debounce vs throttle vs audit vs sample](https://dev.to/rxjs/debounce-vs-throttle-vs-audit-vs-sample-difference-you-should-know-1f21)
+
+## distinctUntilChanged
+
+```js
+const observable$ = from([1, 2, 2, 3, 3, 3]);
+const result$ = observable$.pipe(distinctUntilChanged());
+
+result$.subscribe(console.log);
+```
+```js
+// 1
+// 2
+// 3
+```
+{:style="float:left;"}
+
+{:.image-right #distinctUntilChangedChart}
+![](pictures/distinctUntilChanged.png)
 
 
 ## Операторы высшего порядка
