@@ -92,6 +92,14 @@ style: |
 - Соответсвует одной асинхронной операции
 - Позволяет обработать результат асинхронной операции
 
+## Observable
+{:.section}
+
+## Observer + Iterator = Observable
+
+{:.images #full-screen}
+![](pictures/IteratorAndObserver.png)
+
 ## Зачем observable?
 {:.section}
 
@@ -101,14 +109,6 @@ style: |
 - Обобщение работы с идентичными событиями
 - Обработка результата асинхронного события на основе предыдущих асинхронных событий
 - Прерывание
-
-## Observable
-{:.section}
-
-## Observer + Iterator = Observable
-
-{:.images #full-screen}
-![](pictures/IteratorAndObserver.png)
 
 ## Сигнатура
 
